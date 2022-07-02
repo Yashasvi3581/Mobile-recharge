@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>PayConf</title>
+        <link rel="stylesheet" href="payconf.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="jquery.js"></script>
+        <script src="bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="col-md-3" style="margin-top: 10px; margin-left: 450px; margin-bottom: 10px; float:right;">
+            <a href="customerFeedback.html">
+                <button class="subscribe btn btn-outline-info btn-block" type="button"> Customer Feedback </button>
+            </a></div>
+        <div class="bg">
+            <div class="card">
+                <span class="complete">
+                    <img src="https://images.vexels.com/media/users/3/157931/isolated/preview/604a0cadf94914c7ee6c6e552e9b4487-curved-check-mark-circle-icon-by-vexels.png" width="20%">
+                </span>
+                <h1 class="msg1">Payment Complete</h1>
+                <div class="cbody">
+                    <img src="https://wallpapercave.com/wp/wp2388728.png" alt="airtel" width="15%"; class="logo1">
+                    <div class="info">
+                        <p class="name">Jio India</p>
+                    </div>
+                    <h1 class="price">
+                        Rs. <span id="result"></span>
+                    </h1>
+                    <p class="mode">Mode of Payment</p>
+                    <div class="pbody">
+                        <img src="https://seeklogo.com/images/V/VISA-logo-F3440F512B-seeklogo.com.png" alt="visa" class="credit">
+                        <div class="cdetails">
+                            <p class="ctype">Credit/Debit card</p>
+                            <p class="cnumber">Visa ending with <span id="cno">**34</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">completed</span>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+        </script>
+    </body>
+</html>

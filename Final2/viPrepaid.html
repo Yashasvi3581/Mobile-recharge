@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrePaid</title>
+    <style>
+    * {
+        margin: none;
+        padding: none;
+        scroll-behavior: smooth;
+    }
+
+    .navBar {
+        padding-top: none;
+        margin-top: none;
+        margin-left: 5px;
+        list-style: none;
+        overflow: hidden;
+        position: sticky;
+        top: 0px;
+        width: 95%;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .navBar li{
+        padding: 5px 10px 5px 10px; 
+        font-size: 22px;
+        color: goldenrod;
+        scroll-behavior: smooth;
+        border-bottom: 2px solid white;
+    }
+    
+    .navBar a{
+        text-decoration: none;
+        color: inherit;
+        scroll-behavior: smooth;
+
+    }
+
+    .navBar li:hover{
+        cursor:pointer;
+    }
+
+    .navBar li:active {
+        border-bottom: 2px solid goldenrod;
+    }
+
+    .planPack table {
+        padding: 5px;
+        padding-top: 35px;
+        width: 100%;
+    }
+
+    .planPack table th {
+        text-align: left;
+        background-color: goldenrod;
+        color: white;
+    }
+
+    .planPack table td, th {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+<script>
+    function passvalues(){
+        var firstname=document.getElementById("txt").value;
+        localStorage.setItem("textvalue",firstname);
+        return false;
+    }
+</script>
+</head>
+<body>
+    <form action="CardPay2Vi.html" action="PAYCONF1.html" target="_parent">
+        <input type="text" id="txt" placeholder="Enter plan (e.g. 444)" 
+        style="width: 600px; height: 35px; margin-left : 18%; margin-top: -5px; padding: 5px;">
+        <input type="submit" value="CLICK" onclick="passvalues()" style="width:90px;height : 50px;font-size: 20px;background-color: chocolate;border: none;border-radius: 5px;color : white">
+    </form>
+
+    <br/><hr/>
+
+</div>
+<ul class="navBar">
+    <a href="#unlim"><li>Unlimited Packs</li></a>
+    <a href="#combo"><li>Combo Packs</li></a>
+    <a href="#talk"><li>Talktime Packs</li></a>
+    <a href="#data"><li>Data Packs</li></a>
+</ul>
+<div class="planPack"  id="unlim">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5">Unlimited Packs</th>
+            </tr>
+        <tr>
+            <th>PLANS</th>
+            <th>VALIDITY</th>
+            <th>BENEFITS</th>
+            <th colspan="2"> </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>598</td>
+            <td>56 days</td>
+            <td>Unlimited <br/> 112GB & Disney+ Hotstar</td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>2599</td>
+            <td>365 days</td>
+            <td>Unlimited <br/> 740GB & Disney+ Hotstar</td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>2399</td>
+            <td>365 days</td>
+            <td>730GB <br/> UNLIMITED</td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>599</td>
+            <td>84 days</td>
+            <td>168GB <br/> UNLIMITED</td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>444</td>
+            <td>56 days</td>
+            <td>112GB <br/> UNLIMITED</td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>249</td>
+            <td>28 days</td>
+            <td>56GB <br/> UNLIMITED</td>
+            <td>View Details</td>
+            
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="planPack" id="combo">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5">Combo Packs</th>
+            </tr>
+        <tr>
+            <th>PLANS</th>
+            <th>VALIDITY</th>
+            <th>BENEFITS</th>
+            <th colspan="2"> </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>₹95</td>
+            <td>56 days</td>
+            <td>200 MB data<br/> ₹74 Talktime</td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>₹79</td>
+            <td>28 days</td>
+            <td>400 MB data<br/> ₹64 Talktime</td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>₹49</td>
+            <td>28 days</td>
+            <td>300 MB data<br/> ₹38 Talktime</td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>₹39</td>
+            <td>14 days</td>
+            <td>100 MB data<br/> ₹30 Talktime</td>
+            <td>View Details</td>
+            
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="planPack" id="talk">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5">TalkTime Packs</th>
+            </tr>
+            <tr>
+                <td>₹5000</td>
+                <td>NA</td>
+                <td>₹4237.29 Talktime </td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>₹1000</td>
+                <td>NA</td>
+                <td>₹847.46 Talktime </td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>₹500</td>
+                <td>NA</td>
+                <td>₹423.73 Talktime </td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>₹100</td>
+                <td>NA</td>
+                <td>₹81.75 Talktime </td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>₹20</td>
+                <td>NA</td>
+                <td>₹14.95 Talktime </td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>₹10</td>
+                <td>NA</td>
+                <td>₹7.47 Talktime </td>
+                <td>View Details</td>
+                
+            </tr>
+    </table>
+</div>
+
+<div class="planPack" id="data">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5">Data Packs</th>
+            </tr>
+        <tr>
+            <th>PLANS</th>
+            <th>VALIDITY</th>
+            <th>BENEFITS</th>
+            <th colspan="2"> </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>355</td>
+                <td>28 days</td>
+                <td>50 GB data<br/>Zee5 Premium</td>
+                <td>View Details</td>
+                
+            </tr>
+        <tr>
+            <td>351</td>
+            <td>56 days</td>
+            <td>100 GB data</td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>251</td>
+            <td>28 days</td>
+            <td>50 GB data </td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>98</td>
+            <td>28 days</td>
+            <td>12 GB data </td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>48</td>
+            <td>28 days</td>
+            <td>3 GB data </td>
+            <td>View Details</td>
+            
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>24 hours</td>
+            <td>1 GB data </td>
+            <td>View Details</td>
+            
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>   

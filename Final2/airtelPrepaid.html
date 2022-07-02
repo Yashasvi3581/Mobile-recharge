@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepaid</title>
+    <style>
+        * {
+            margin: none;
+            padding: none;
+            scroll-behavior: smooth;
+        }
+
+        .navBar {
+            padding-top: none;
+            margin-top: none;
+            margin-left: 5px;
+            list-style: none;
+            overflow: hidden;
+            position: sticky;
+            top: 0px;
+            width: 95%;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .navBar li{
+            padding: 5px 10px 5px 10px; 
+            font-size: 22px;
+            color: crimson;
+            scroll-behavior: smooth;
+            border-bottom: 2px solid white;
+        }
+        
+        .navBar a{
+            text-decoration: none;
+            color: inherit;
+            scroll-behavior: smooth;
+
+        }
+
+        .navBar li:hover{
+            cursor:pointer;
+        }
+
+        .navBar li:active {
+            border-bottom: 2px solid crimson;
+        }
+
+        .planPack table {
+            padding: 5px;
+            padding-top: 35px;
+            width: 100%;
+        }
+
+        .planPack table th {
+            text-align: left;
+            background-color: crimson;
+            color: white;
+        }
+
+        .planPack table td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function passvalues(){
+            var firstname=document.getElementById("txt").value;
+            localStorage.setItem("textvalue",firstname);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form action="CardPay2.html" action="PAYCONF.html" target="_parent">
+        <input type="text" id="txt" placeholder="Enter plan (e.g. 698)" 
+        style="width: 600px; height: 35px; margin-left : 18%; margin-top: -5px; padding: 5px;">
+        <input type="submit" value="CLICK" onclick="passvalues()" style="width:90px;height : 50px;font-size: 20px;background-color: black; border: none;border-radius: 5px;color : white">
+    </form>
+
+    <br/><hr/>
+    
+    <ul class="navBar">
+        <a href="#truly"><li>Truly Unlimited</li></a>
+        <a href="#smart"><li>Smart Recharge</li></a>
+        <a href="#data"><li>Data</li></a>
+        <a href="#talk"><li>TalkTime</li></a>
+        <a href="#int"><li>International Roaming</li></a>   
+    </ul>
+
+    <div id="truly" class="planPack">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5">Truly Unlimited</th>
+            </tr>
+            <tr>
+                <th>PLANS</th>
+                <th>VALIDITY</th>
+                <th>BENEFITS</th>
+                <th colspan="2"> </th>
+            </tr>
+        </thead>
+            <tr>
+                <td>2698</td>
+                <td>365 days</td>
+                <td>Unlimited <br/> 2 GB/day & Disney + Hotstar VIP </td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>2498</td>
+                <td>365 days</td>
+                <td>Unlimited <br/> 2 GB/day & Airtel Xstream Premium </td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>1498</td>
+                <td>365 days</td>
+                <td>Unlimited Calls<br/> 24 GB & Airtel Xstream Premium </td>
+                <td>View Details</td>
+                
+            </tr>
+
+            <tr>
+                <td>698</td>
+                <td>84 days</td>
+                <td>Unlimited <br/> 2 GB/day & Airtel Xstream Premium </td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>598</td>
+                <td>84 days</td>
+                <td>Unlimited Calls<br/> 1.5 GB/day & Airtel Xstream Premium </td>
+                <td>View Details</td>
+                
+            </tr>
+
+            <tr>
+                <td>599</td>
+                <td>56 days</td>
+                <td>Unlimited <br/> 2 GB/day & Disney + Hotstar VIP </td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>558</td>
+                <td>56 days</td>
+                <td>Unlimited <br/> 3 GB/day & Airtel Xstream Premium </td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>449</td>
+                <td>56 days</td>
+                <td>Unlimited<br/> 2 GB/day & Airtel Xstream Premium </td>
+                <td>View Details</td>
+                
+            </tr>
+
+            <tr>
+                <td>448</td>
+                <td>28 days</td>
+                <td>Unlimited <br/> 3 GB/day & Disney + Hotstar VIP </td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>398</td>
+                <td>28 days</td>
+                <td>Unlimited <br/> 3 GB/day & Airtel Xstream Premium </td>
+                <td>View Details</td>
+                
+            </tr>
+
+            <tr>
+                <td>379</td>
+                <td>84 days</td>
+                <td>Unlimited Calls<br/> 6 GB & Airtel Xstream Premium </td>
+                <td>View Details</td>
+                
+            </tr>
+
+            <tr>
+                <td>349</td>
+                <td>28 days</td>
+                <td>Unlimited<br/> 2 GB/day & Amazon Prime Membership </td>
+                <td>View Details</td>
+                
+            </tr>
+    </table>
+    </div>
+
+    <div id="smart" class="planPack">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5">Smart Recharge</th>
+                </tr>
+                <tr>
+                    <th>PLANS</th>
+                    <th>VALIDITY</th>
+                    <th>BENEFITS</th>
+                    <th colspan="2"> </th>
+                </tr>
+            </thead>
+                <tr>
+                    <td>₹79</td>
+                    <td>28 days</td>
+                    <td>200 MB data<br/> ₹64 Talktime </td>
+                    <td>View Details</td>
+                    
+                </tr>
+                <tr>
+                    <td>₹49</td>
+                    <td>28 days</td>
+                    <td>100 MB data<br/> ₹38.52 Talktime </td>
+                    <td>View Details</td>
+                    
+                </tr>
+                <tr>
+                    <td>₹45</td>
+                    <td>28 days</td>
+                    <td>0 MB data<br/> ₹0 Talktime </td>
+                    <td>View Details</td>
+                    
+                </tr>
+    
+        </table>
+        </div>
+
+        <div id="data" class="planPack">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="5">Data</th>
+                    </tr>
+                    <tr>
+                        <th>PLANS</th>
+                        <th>VALIDITY</th>
+                        <th>BENEFITS</th>
+                        <th colspan="2"> </th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td>₹401</td>
+                        <td>28 days</td>
+                        <td>30 GB data<br/>Disney + Hotstar VIP </td>
+                        <td>View Details</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>₹48</td>
+                        <td>28 days</td>
+                        <td>3 GB data</td>
+                        <td>View Details</td>
+                        
+                    </tr>
+            </table>
+            </div>
+
+            <div id="talk" class="planPack">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="5">TalkTime</th>
+                        </tr>
+                        <tr>
+                            <th>PLANS</th>
+                            <th>VALIDITY</th>
+                            <th>BENEFITS</th>
+                            <th colspan="2"> </th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td>₹5000</td>
+                            <td>NA</td>
+                            <td>₹4237.29 Talktime </td>
+                            <td>View Details</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>₹1000</td>
+                            <td>NA</td>
+                            <td>₹847.46 Talktime </td>
+                            <td>View Details</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>₹500</td>
+                            <td>NA</td>
+                            <td>₹423.73 Talktime </td>
+                            <td>View Details</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>₹100</td>
+                            <td>NA</td>
+                            <td>₹81.75 Talktime </td>
+                            <td>View Details</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>₹20</td>
+                            <td>NA</td>
+                            <td>₹14.95 Talktime </td>
+                            <td>View Details</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>₹10</td>
+                            <td>NA</td>
+                            <td>₹7.47 Talktime </td>
+                            <td>View Details</td>
+                            
+                        </tr>
+                </table>
+                </div>
+  
+
+                <div id="int" class="planPack">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="5">International Roaming</th>
+                            </tr>
+                            <tr>
+                                <th>PLANS</th>
+                                <th>VALIDITY</th>
+                                <th>BENEFITS</th>
+                                <th colspan="2"> </th>
+                            </tr>
+                        </thead>
+                            <tr>
+                                <td>₹6999</td>
+                                <td>30 days</td>
+                                <td>500mins incoming, 5GB, 500mins local/India calls, 100 sms. </td>
+                                <td>View Details</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>₹4999</td>
+                                <td>10 days</td>
+                                <td>Unlimited incoming, 1GB/day, 500mins of local/India calls, 100 sms. </td>
+                                <td>View Details</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>₹3998</td>
+                                <td>30 days</td>
+                                <td>
+                                    500mins incoming, 5GB, 500mins local/India calls, 100 sms. </td>
+                                <td>View Details</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>₹3997</td>
+                                <td>30 days</td>
+                                <td>
+                                    Unlimited incoming, 5GB, 500mins local/India calls, 100 sms. </td>
+                                <td>View Details</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>₹3995</td>
+                                <td>10 days</td>
+                                <td>
+                                    250mins incoming, 3GB, 250mins local/India calls, 100 sms. </td>
+                                <td>View Details</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>₹3599</td>
+                                <td>10 days</td>
+                                <td>
+                                    Unlimited incoming, 3GB, 250mins local/India calls, 100 sms. </td>
+                                <td>View Details</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>₹2499</td>
+                                <td>30 days</td>
+                                <td> Unlimited incoming, 5GB, 500mins local/India calls, 100 sms. </td>
+                                <td>View Details</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>₹1499</td>
+                                <td>10 days</td>
+                                <td> Unlimited incoming, 3GB, 250mins local/India calls, 100 sms. </td>
+                                <td>View Details</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>₹1199</td>
+                                <td>30 days</td>
+                                <td> 
+                                    1 GB, 100mins of incoming/Local/India calls </td>
+                                <td>View Details</td>
+                                
+                            </tr>
+                    </table>
+                    </div>
+</body>
+</html>

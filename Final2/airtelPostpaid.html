@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postpaid</title>
+    <style>
+        * {
+            margin: none;
+            padding: none;
+            scroll-behavior: smooth;
+        }
+
+        .navBar {
+            padding-top: none;
+            margin-top: none;
+            margin-left: 5px;
+            list-style: none;
+            overflow: hidden;
+            position: sticky;
+            top: 0px;
+            width: 95%;
+            background-color: white;
+        }
+
+        .navBar li{
+            float: left;
+            padding: 5px 10px 5px 10px; 
+            font-size: 22px;
+            color: crimson;
+            scroll-behavior: smooth;
+            border-bottom: 2px solid crimson;
+        }
+        
+        .navBar a{
+            text-decoration: none;
+            color: inherit;
+            scroll-behavior: smooth;
+
+        }
+
+        .navBar li:hover{
+            cursor:pointer;
+        }
+
+        .planPack table {
+            padding: 5px;
+            width: 100%;
+        }
+
+        .planPack table th {
+            text-align: left;
+            background-color: crimson;
+            color: white;
+        }
+
+        .planPack table td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function passvalues(){
+            var firstname=document.getElementById("txt").value;
+            localStorage.setItem("textvalue",firstname);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form action="CardPay2.html"  action="PAYCONF.html" target="_parent">
+        <input type="text" id="txt" placeholder="Enter plan (e.g. 499)" 
+        style="width: 600px; height: 35px; margin-left : 18%; margin-top: -5px; padding: 5px;">
+        <input type="submit" value="CLICK" onclick="passvalues()" style="width:90px;height : 50px;font-size: 20px;background-color: black;border: none;border-radius: 5px;color : white">
+    </form>
+    
+    <br/><hr/>
+    <ul class="navBar">
+        <a href="#best"><li style="margin-right: 40px;">Best Plans</li></a>
+    </ul>
+
+    <div id="best" class="planPack">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5">Popular Plans</th>
+                </tr>
+                <tr>
+                    <th>PLANS</th>
+                    <th>VALIDITY</th>
+                    <th>BENEFITS</th>
+                    <th colspan="2"> </th>
+                </tr>
+            </thead>
+            <tr>
+                <td>399</td>
+                <td>Bill Cycle</td>
+                <td>Unlimited Calls<br/> 40GB & 100 SMS/day</td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>499</td>
+                <td>Bill Cycle</td>
+                <td>Unlimited Calls<br/> 75GB & Amazon Prime Membership</td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>749</td>
+                <td>Bill Cycle</td>
+                <td>Unlimited Calls<br/> 125GB & Amazon Prime Membership</td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>999</td>
+                <td>Bill Cycle</td>
+                <td>Unlimited Calls<br/> 150GB & Amazon Prime Membership</td>
+                <td>View Details</td>
+                
+            </tr>
+            <tr>
+                <td>1599</td>
+                <td>Bill Cycle</td>
+                <td>Unlimited Data & Calls<br/> Disney+ Hotstar & Amazon Prime Membership</td>
+                <td>View Details</td>
+                
+            </tr>
+        </table>
+
+</body>
+</html>

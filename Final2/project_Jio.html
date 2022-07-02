@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jio - Plans</title>
+    <style>
+        .topBar {
+            margin: 0;
+            margin-bottom: 5px;
+            padding: 8px;
+            background-color: cornflowerblue;
+            border: 2px solid brown;
+            border-radius: 10px;
+        }
+        .sideBar {
+               position: fixed;
+               padding: 10px 0 10px 2px;
+               width: 14%;
+               margin-left: 0;
+               background-color: cornflowerblue;
+               border: 2px solid brown;;
+               border-radius: 10px;
+           }
+
+        .sideBar li {
+            font-size: 20px;
+            font-family: sans-serif;
+            margin-left: -16%;
+            margin-bottom: 14px;
+         }
+
+        .sideBar span {
+            border-radius: 6px;
+            padding: 6px;
+        }
+        .sideBar span:hover {
+            border: 2px solid rgb(0, 0, 100);
+            cursor:pointer;
+            color: white;
+        }
+       </style>
+   </head>
+   <body>
+       <div class="topBar">
+           <img src="jio-logo.png" height="57px"/>
+       </div>
+       <div class="sideBar">
+           <ol style="list-style: none;">
+               <li><span id="prePaid" style="background-color: rgb(70, 70, 255)">PrePaid Plans</span></li>
+               <li><span id="postPaid">PostPaid Plans</span></li>
+           </ol>
+       </div>
+       <iframe src="jioPrepaid.html" width="84%" height="500" style="margin-left: 198px; border: 2px solid brown;" id="mainFrame"></iframe>
+    <script>
+        document.getElementById('prePaid').onclick = function(){
+            document.getElementById('mainFrame').src="jioPrepaid.html";
+            document.getElementById('prePaid').style.backgroundColor = "rgb(70, 70, 255)";
+            document.getElementById('postPaid').style.backgroundColor = "cornflowerblue";
+        }
+        document.getElementById('postPaid').onclick = function(){
+            document.getElementById('mainFrame').src="jioPostpaid.html";
+            document.getElementById('postPaid').style.backgroundColor = "rgb(70, 70, 255)";
+            document.getElementById('prePaid').style.backgroundColor = "cornflowerblue";
+        }
+    </script>
+    </body>
+    </html>

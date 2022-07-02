@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VI - Plans</title>
+    <style>
+        .topBar {
+            margin: 0;
+            margin-bottom: 5px;
+            padding: 10px;
+            background-color: bisque;
+            border: 2px solid brown;
+            border-radius: 10px
+        }
+        .sideBar {
+               position: fixed;
+               padding: 10px 0 10px 2px;
+               width: 14%;
+               margin-left: 0;
+               background-color: bisque;
+               border: 2px solid brown;
+               border-radius: 10px
+           }
+        
+        .sideBar li {
+            font-size: 20px;
+            font-family: sans-serif;
+            margin-left: -16%;
+            margin-bottom: 14px;
+        }
+
+        .sideBar span {
+            border-radius: 6px;
+            padding: 6px;
+        }
+        .sideBar span:hover {
+            border: 2px solid rgb(155, 83, 32);
+            cursor:pointer;
+            color:  rgb(155, 83, 32);
+        }
+
+       </style>
+   </head>
+   <body>
+       <div class="topBar">
+           <img src="https://seeklogo.com/images/V/vi-logo-43C6C35482-seeklogo.com.png" height="54px"/>
+       </div>
+       <div class="sideBar">
+           <ol style="list-style: none;">
+               <li><span id="prePaid" style="background-color: rgb(212, 168, 114);">PrePaid Plans</span></li>
+               <li><span id="postPaid">PostPaid Plans</span></li>
+           </ol>
+       </div>
+       <iframe src="viPrepaid.html" width="84%" height="500" style="margin-left: 198px; border: 2px solid brown;;" id="mainFrame"></iframe>
+    <script>
+        document.getElementById('prePaid').onclick = function(){
+            document.getElementById('mainFrame').src="viPrepaid.html";
+            document.getElementById('prePaid').style.backgroundColor = "rgb(212, 168, 114)";
+            document.getElementById('postPaid').style.backgroundColor = "bisque";
+        }
+        document.getElementById('postPaid').onclick = function(){
+            document.getElementById('mainFrame').src="viPostpaid.html";
+            document.getElementById('postPaid').style.backgroundColor = "rgb(212, 168, 114)";
+            document.getElementById('prePaid').style.backgroundColor = "bisque";
+        }
+    </script>
+    </body>
+    </html>

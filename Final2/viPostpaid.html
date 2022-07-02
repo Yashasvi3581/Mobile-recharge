@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostPaid</title>
+    <style>
+        * {
+            margin: none;
+            padding: none;
+            scroll-behavior: smooth;
+        }
+
+        .navBar {
+            padding-top: none;
+            margin-top: none;
+            margin-left: 5px;
+            list-style: none;
+            overflow: hidden;
+            position: sticky;
+            top: 0px;
+            width: 95%;
+            background-color: white;
+        }
+
+        .navBar li{
+            float: left;
+            padding: 5px 10px 5px 10px; 
+            font-size: 22px;
+            color: goldenrod;
+            scroll-behavior: smooth;
+            border-bottom: 2px solid white;
+        }
+        
+        .navBar a{
+            text-decoration: none;
+            color: inherit;
+            scroll-behavior: smooth;
+
+        }
+
+        .navBar li:hover{
+            cursor:pointer;
+        }
+
+        .navBar li:active {
+            border-bottom: 2px solid goldenrod;
+        }
+
+        .planPack table {
+            padding: 5px;
+            padding-top: 35px;
+            width: 100%;
+        }
+
+        .planPack table th {
+            text-align: left;
+            background-color: goldenrod;
+            color: white;
+        }
+
+        .planPack table td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function passvalues(){
+            var firstname=document.getElementById("txt").value;
+            localStorage.setItem("textvalue",firstname);
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="CardPay2Vi.html" action="PAYCONF1.html" target="_parent">
+        <input type="text" id="txt" placeholder="Enter plan (e.g. 499)" 
+        style="width: 600px; height: 35px; margin-left : 18%; margin-top: -5px; padding: 5px;">
+        <input type="submit" value="CLICK" onclick="passvalues()" 
+        style="width:90px;height : 50px; font-size: 20px; background-color: chocolate; border: none; border-radius: 5px; color: white">
+    </form>
+
+    <br/><hr/>
+
+    <ul class="navBar">
+        <a href="#main"><li style="margin-right: 40px;">Main Plan</li></a>
+        <a href="#reg"><li>Regular Plan</li></a>
+    </ul>
+
+    <div id="main" class="planPack">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4">Main Plan</th>
+                </tr>
+                <tr>
+                    <th>PLANS</th>
+                    <th>VALIDITY</th>
+                    <th>BENEFITS</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tr>
+                <td>1099</td>
+                <td>Bill Cycle</td>
+                <td>Unlimited Data<br/> Netflix & Amazon Prime membership</td>
+                <td>View Details</td>
+            </tr>
+            <tr>
+                <td>699</td>
+                <td>Bill Cycle</td>
+                <td>Unlimited Data<br/> Amazon Prime membership</td>
+                <td>View Details</td>
+            </tr>
+            <tr>
+                <td>499</td>
+                <td>Bill Cycle</td>
+                <td>150 GB</td>
+                <td>View Details</td>
+            </tr>
+            <tr>
+                <td>399</td>
+                <td>Bill Cycle</td>
+                <td>200 GB</td>
+                <td>View Details</td>
+            </tr>
+        </table>
+    </div>
+        <div id="reg" class="planPack">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4">Regular Plan</th>
+                </tr>
+                <tr>
+                    <th>PLANS</th>
+                    <th>VALIDITY</th>
+                    <th>BENEFITS</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tr>
+                <td>200</td>
+                <td>Bill Cycle</td>
+                <td>25 GB</td>
+                <td>View Details</td>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>Bill Cycle</td>
+                <td>25 GB</td>
+                <td>View Details</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>Bill Cycle</td>
+                <td>25 GB</td>
+                <td>View Details</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

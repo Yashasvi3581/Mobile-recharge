@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback</title>
+    <style>
+            body {
+                background-color: rgb(247, 221, 187);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+        #num:hover{
+            cursor: pointer;
+            background-color: aquamarine;
+        }
+
+
+    div {
+        border: 2px solid black;
+        width: fit-content;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 5px;
+        background-color: wheat;
+    }
+
+    h1, h5{
+        text-align: center;
+    }
+
+    #createAcc {
+        background-color: rgb(255, 175, 27);
+        width: 100%;
+        margin-top: 5px;
+        padding: 5px;
+        border-radius: 4px;
+
+    }
+
+    #createAcc:hover {
+        background-color: rgb(214, 151, 33);
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+<h1 style="font-family: Baskerville Old Face;">Customer Feedback</h1>
+<div>
+    <p>Do you have a query?</p>
+    <form>
+    <textarea name="comments" rows="4" cols="50" style="font-size: 14px; margin-bottom: 8px; padding: 5px;" 
+    autocomplete="off" placeholder="Your comments..."></textarea>
+    <hr/>
+    <p>Based on your recent online purchase, how likely are<br/>
+        you to recommend us to a colleague or client?</p>
+    <div style="border: none;">
+    <input type="range" id="num" name="ran" min="1" max="10" value="9" style="width: 300px;"/>
+    </div>
+    <h5>&#8656; Not Satisfied &nbsp; &nbsp; &nbsp; &nbsp; Very Satisfied &#8658;</h5>
+    <br/>
+        <input type="submit" id="createAcc" value="Submit Feedback" onclick="alert('Thank you for your Feedback!')"/>
+        </form>
+        <h6 style="text-align: center;">By continuing, you agree to our Conditions of Use and Privacy Notice.</h6>
+    <hr/>
+    <h5>For more feedback, you're welcome to contact us: <br/> 
+        <a href="mailto:aditya.sharma.co19@nsut.ac.in">@Aditya</a>, 
+        <a href="mailto:deepak.verma.co19@nsut.ac.in">@Deepak</a> or
+        <a href="mailto:yashasvi.bokolia.co19@nsut.ac.in">@Yashasvi</a></h5>
+</div>
+</div> 
+</body>
+</html>

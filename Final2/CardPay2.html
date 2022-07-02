@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Card Payment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="/Users/monojverma/Documents/HTMLs/CSS/payconf.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </head>
+  <body>
+    <div class="check">
+      <aside class="col-md-7" style="margin:auto; background-color: rgb(22, 230, 60); border-radius: 10px; margin-top: 20px;>
+    
+    
+    <article class="card">
+    <div class="card-body p-5">
+    <p> <img src="https://seeklogo.com/images/V/VISA-logo-F3440F512B-seeklogo.com.png" width="20%"; style="background-color:white; border-radius: 8px;"> 
+      <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-114814,resizemode-1,msid-60955286/small-biz/money/mastercard-enters-into-an-agreement-with-andhra-pradesh-government-for-robust-digital-solutions/mastercard.jpg" width="20%" style="border-radius: 8px;"> 
+       <img src="https://cdn.iconscout.com/icon/free/png-512/american-express-6-675747.png" width="20%" style="background-color: white;" style="border-radius: 8px;">
+    </p>
+    <p class="alert alert-success">Payment of Rs. <span id="result"></span></p>
+    
+    <form role="form">
+    <div class="form-group">
+    <label for="username">Full name</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fa fa-user"></i></span>
+      </div>
+      <input type="text" class="form-control" name="username" placeholder="" required="">
+    </div> 
+    </div> 
+    
+    <div class="form-group">
+    <label for="cardNumber">Card number</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
+      </div>
+      <input type="number" class="form-control" id="cardNo" name="cardNumber" placeholder="" max="9999999999999999" min="1000000000000000" maxlength="16" minlength="16">
+    </div> 
+    </div> 
+    
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label><span class="hidden-xs">Expiration</span> </label>
+              <div class="form-inline">
+                <select class="form-control" style="width:45%">
+              <option>MM</option>
+              <option>Jan</option>
+              <option>Feb</option>
+              <option>Mar</option>
+              <option>Apr</option>
+              <option value="">May</option>
+              <option value="">June</option>
+              <option value="">July</option>
+              <option value="">Aug</option>
+              <option value="">Sept</option>
+              <option value="">Oct</option>
+              <option value="">Nov</option>
+              <option value="">Dec</option>
+            </select>
+                  <span style="width:10%; text-align: center"> / </span>
+                  <select class="form-control" style="width:45%">
+              <option>YY</option>
+              
+              <option value="">2020</option>
+              <option value="">2021</option>
+              <option value="">2022</option>
+              <option value="">2023</option>
+              <option value="">2024</option>
+              <option value="">2025</option>
+              <option value="">2026</option>
+              <option value="">2027</option>
+              <option value="">2028</option>
+              <option>2029</option>
+              <option>2030</option>
+            </select>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+              <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+              <input class="form-control" required="" type="password" maxlength="3" minlength="3">
+          </div> 
+      </div>
+    </div> 
+    <a href="PAYCONF.html">
+      <button class="subscribe btn btn-primary btn-block" type="button"> Confirm  </button>
+    </a>
+    
+    </form>
+    </div> 
+    </article> 
+    
+    
+      </aside>
+    
+    <script>
+      document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+
+    </script>
+      
+  </body>
+</html>
